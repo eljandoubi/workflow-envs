@@ -94,7 +94,7 @@ make results              # episode and training tables in results/
 
 `scripts/mutate.py` changes one line of a verifier, the sandbox, the training update or the core in a copy, 18 times, and checks that a test fails each time. All 18 are caught.
 
-Python 3.9 or newer. The tables are identical on 3.9.6 and 3.12.13. Measured on 2026-11-14 on an Apple M4 laptop (10 cores), CPU only; `make results` takes about 25 s.
+Python 3.9 or newer. CI runs 3.11 and 3.12; the tests also pass on 3.9.6 and the tables are identical on 3.9.6 and 3.12.13 (local runs). Measured on 2026-11-14 on an Apple M4 laptop (10 cores), CPU only; `make results` takes about 25 s.
 
 ## Layout
 
