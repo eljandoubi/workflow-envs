@@ -8,7 +8,7 @@ Three small RL environments in plain Python. Each has a naive verifier, the quic
 
 CPU only, no dependency besides pytest. No language model is run: the agents are scripts.
 
-## Result
+## Results
 
 160 episodes: 16 scripted policies, both verifiers, 5 seeds (`results/episodes.jsonl`). "valid" comes from a stricter check on held-out data that neither verifier sees. Kinds: honest is correct work, wrong is an honest attempt with a bug, exploit games the check. "steps" is the number of actions per episode.
 
@@ -113,7 +113,7 @@ tests/          204 tests
 scripts/mutate.py
 ```
 
-## Limits
+## Status and limits
 
 - The agents are scripts. No language model was run or trained. The training study is a softmax over 4 to 7 strategies with rewards read from recorded episodes (each environment is deterministic for a seed). It shows the mechanism, not what a model does.
 - The naive verifiers are written to be exploitable and the hacks are mine. The hardened ones close these hacks, not every hack: a query that leans on quirks of the data generator, or code that finds a quirk of the pendulum cases, is not covered.
